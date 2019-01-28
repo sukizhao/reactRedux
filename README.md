@@ -51,7 +51,7 @@ react的diff算法用在什么地方呢？当组件更新的时候，react会创
 
 对于列表的diff算法稍有不同，因为列表通常具有相同的结构，在对列表节点进行删除，插入，排序的时候，单个节点的整体操作远比一个个对比一个个替换要好得多，所以在创建列表的时候需要设置key值，这样react才能分清谁是谁。当然不写key值也可以，但这样通常会报出警告，通知我们加上key值以提高react的性能。
 
-![](https://github.com/sukizhao/reactRedux/screenshot/diff.png)
+![](https://github.com/sukizhao/reactRedux/blob/master/screenshot/diff.png)
 
 
 
@@ -60,7 +60,7 @@ react的diff算法用在什么地方呢？当组件更新的时候，react会创
 
 组件的创造方法为React.createClass() ——创造一个类，react系统内部设计了一套类系统，利用它来创造react组件。但这并不是必须的，我们还可以用es6的class类来创造组件,这也是Facebook官方推荐的写法。
 
-![](https://github.com/sukizhao/reactRedux/screenshot/icon_class.png)
+![](https://github.com/sukizhao/reactRedux/blob/master/screenshot/icon_class.png)
 
 这两种写法实现的功能一样但是原理却是不同，es6的class类可以看作是构造函数的一个语法糖，可以把它当成构造函数来看，extends实现了类之间的继承 —— 定义一个类Main 继承React.Component所有的属性和方法，组件的生命周期函数就是从这来的。constructor是构造器，在实例化对象时调用，super调用了父类的constructor创造了父类的实例对象this，然后用子类的构造函数进行修改。这和es5的原型继承是不同的，原型继承是先创造一个实例化对象this，然后再继承父级的原型方法。了解了这些之后我们在看组件的时候就清楚很多。
 
@@ -73,7 +73,7 @@ react的diff算法用在什么地方呢？当组件更新的时候，react会创
 
 ## 组件的生命周期
 
-![](https://github.com/sukizhao/reactRedux/screenshot/react-lifecycle.png)
+![](https://github.com/sukizhao/reactRedux/blob/master/screenshot/react-lifecycle.png)
 
 **组件在初始化时会触发5个钩子函数：**
 
@@ -190,7 +190,7 @@ react推崇的是单向数据流，自上而下进行数据的传递，但是由
 #### 流程是这个样子的：
 
 
-![](https://github.com/sukizhao/reactRedux/screenshot/simple_redux.jpg)
+![](https://github.com/sukizhao/reactRedux/blob/master/screenshot/simple_redux.jpg)
 
 值得注意的是connect，Provider，mapStateToProps,mapDispatchToProps是react-redux提供的，redux本身和react没有半毛钱关系，它只是数据处理中心，没有和react产生任何耦合，是react-redux让它们联系在一起。
 
@@ -200,7 +200,7 @@ react推崇的是单向数据流，自上而下进行数据的传递，但是由
 
 #### 先上一张图
 
-![](https://github.com/sukizhao/reactRedux/screenshot/all_redux.png)
+![](https://github.com/sukizhao/reactRedux/blob/master/screenshot/all_redux.png)
 
 明显比第一张要复杂，其实两张图说的是同一件事。从上而下慢慢分析：
 
@@ -352,7 +352,7 @@ import { Router, Route, Redirect, IndexRoute, browserHistory, hashHistory } from
 
 通常我们在顶层的ui组件打印props时可以看到一堆属性：
 
-![](https://github.com/sukizhao/reactRedux/screenshot/react_props.png)
+![](https://github.com/sukizhao/reactRedux//blob/master/blob/master/screenshot/react_props.png)
 
 上图的顶层ui组件属性总共有18个，如果刚刚接触react，可能对这些属性怎么来的感到困惑，其实这些属性来自五个地方：
 
